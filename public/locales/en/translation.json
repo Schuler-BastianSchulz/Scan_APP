@@ -1,0 +1,42 @@
+{
+  "Settings": "Settings",
+  "settings": {
+    "Language": "Language",
+    "Logout": "Logout",
+    "Do you want logout": "Do you want logout"
+  },
+
+  "App is running in background": "App is running in background",
+  "Collecting beacon data": "Collecting beacon data",
+
+  "Please enter email": "Please enter email",
+  "Please enter password": "Please enter password",
+  "Email Address": "Email Address",
+  "Password": "Password",
+  "Login": "Login",
+  "Forgot Password": "Forgot Password",
+  "Check email box for recovery email and try to login": "Check email box for recovery email and try to login",
+  "Recover Password": "Recover Password",
+  "Back to Login": "Back to Login",
+
+  "Equipment": "Equipment",
+  "Alarms": "Alarms",
+
+  "Cancel": "Cancel",
+  "Next": "Next",
+  "Prev": "Prev",
+  "Save": "Save",
+  "No": "No",
+  "OK": "OK",
+  "Done": "Done",
+
+  "Scan Code": "Scan Now",
+  "Place a barcode inside the scan area": "Place a barcode inside the scan area",
+
+  "Container Number": "Container Number",
+  "Search": "Search",
+  "No record found": "No record found",
+  "Show Location": "Show Location",
+
+  "Please click here to activate the app": "Please click here to activate the app"
+}

@@ -1,0 +1,39 @@
+{
+  "Settings": "Einstellungen",
+  "settings": {
+    "Language": "Sprache",
+    "Logout": "Abmelden",
+    "Do you want logout": "Möchten Sie sich wirklich abmelden"
+  },
+
+  "Please enter email": "Please enter email",
+  "Please enter password": "Please enter password",
+  "Email Address": "E-Mail-Adresse",
+  "Password": "Passwort",
+  "Login": "Anmelden",
+  "Forgot Password": "Passwort vergessen",
+  "Check email box for recovery email and try to login": "Check email box for recovery email and try to login",
+  "Recover Password": "Recover Password",
+  "Back to Login": "Back to Login",
+
+  "Equipment": "Maschine",
+  "Alarms": "Alarm",
+
+  "Cancel": "Abbrechen",
+  "Next": "Weiter",
+  "Prev": "Zurück",
+  "Save": "Übernehmen",
+  "No": "Nein",
+  "OK": "Ja",
+  "Done": "Fertig",
+
+  "Scan Code": "Jetzt scannen",
+  "Place a barcode inside the scan area": "Platzieren Sie einen Barcode im Scanbereich",
+
+  "Container Number": "Container Nummer",
+  "Search": "Suche",
+  "No record found": "No record found",
+  "Show Location": "Show Location",
+
+  "Please click here to activate the app": "Bitte aktivieren Sie das App Fenster durch einen Klick"
+}

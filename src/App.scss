@@ -1,0 +1,797 @@
+$colorPrimary: #2196F3;
+$colorPrimaryDark: #1976D2;
+$textViewColor: #4b4b4b;
+
+$colorPrimaryTrial: #0046a3;
+
+//$colorPrimaryBackground: #99c6e4
+
+$colorButton: #0AC449;
+$colorButtonLight: #99c6e4;
+
+$colorCircle: #39DC1F;
+
+$bgMain: white;
+$bgHeader: #99c6e4;
+$bg_dark_blue: rgb(51, 102, 153);
+$colorDanger: red;
+$colorBtnInactive: lightgray;
+
+* {
+  box-sizing : border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: $bgMain;
+  color: $bg_dark_blue;
+  font-size: 16px;
+
+  margin: 0;
+  font-family: -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  a {
+    color: white;
+    &:hover {
+      color: cornflowerblue;
+    }
+  }
+}
+
+
+header {
+  padding: 0.5em 1em;
+  background: $colorPrimaryTrial; //$bgHeader;
+  color: white;
+  height: 4em;
+  display: grid;
+  grid-template-columns: auto 100px;
+  grid-template-areas: "logo button";
+  .logo {
+    grid-area: logo;
+    align-self: center;
+    align-items: center;
+    display: flex;
+
+    img {
+      height: 36px;
+    }
+    span {
+      font-weight: bold;
+      font-size: 1em;
+    }
+  }
+  .buttons {
+    grid-area: button;
+    justify-self: end;
+    display: inline-block;
+    align-self: center;
+
+    & > a {
+      margin-left: 1em;
+    }
+  }
+}
+
+
+.section {
+  margin: 1em 1em 0 1em;
+  padding: 1em;
+  background-color: #FFF;
+  color: black;
+
+  .mainpict {
+    img {
+      width: 100%;
+    }
+  }
+}
+.sectionempty {
+  padding: 0em;
+  & > div {
+    padding: 1em;
+  }
+}
+
+
+.pict_menu_extra_space {
+  margin-bottom: 1em;
+}
+.pict_menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  _justify-content: space-between;
+  align-items: flex-start;
+
+  & > div {
+    flex: none;
+    width: 25%;
+    _height: 12em;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+
+    .hex {
+      background: $bg_dark_blue;
+    }
+    &:hover .hex{
+      background: dodgerblue;
+    }
+
+    & > div {
+      font-size: 3px;
+      img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 100;
+        top: 50%;
+        transform: translateY(-50%);      }
+    }
+    & > span {
+      font-size: 0.8em;
+      font-weight: bold;
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+
+.loginForm {
+  margin: 0 auto;
+  max-width: 320px;
+  h1 {
+    font-size: 1.25em;
+  }
+  label {
+    width: 100%;
+    input {
+      width: 100%;
+    }
+  }
+  .error {
+    color: red;
+    text-align: center;
+  }
+}
+
+
+
+.page {
+  h1 {
+    margin: 0;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    background: $bg_dark_blue;
+    color: white;
+  }
+}
+
+
+.main {
+    margin-bottom: 1em;
+}
+
+.button {
+  min-width: auto;
+  padding: 6px 18px;
+  border-width: 0px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 140, 255);
+  border-color: rgb(221, 221, 221);
+  outline: currentcolor none medium;
+
+  border-style: solid !important;
+  cursor: pointer;
+  position: relative;
+}
+
+.scanButton {
+  margin: 0 0 1em;
+  width: 100%;
+  text-align: center;
+  height: 4em;
+}
+
+
+.loginwindow {
+  .logo {
+    padding: 3em;
+    text-align: center;
+    background: white;
+    img {
+      width: 90%;
+      max-width: 300px;
+    }
+    .lang {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+    }
+  }
+}
+.loginForm {
+  _padding: 1em;
+  h1 {
+    display: none;
+  }
+  div {
+    font-size: 1em;
+    padding: 0 1em;
+    label {
+      width: 100%;
+      padding: 0.5em 0;
+      display: inline-block;
+      _color: white;
+    }
+    input {
+      width: 100%;
+      padding: 0.5em;
+      border: solid 1px $colorPrimaryDark;
+      border-radius: 0.5em;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0px 0px 2px $colorPrimaryDark;
+      }
+    }
+    span {
+      width: 100%;
+      padding: 0.5em 0;
+      display: inline-block;
+      color: $colorPrimaryTrial;
+      text-align: right;
+    }
+    button {
+      line-height: 2em;
+    }
+  }
+}
+
+button, .btn {
+  _margin-top: 1em;
+  width: 100%;
+  min-width: 100px;
+  padding: 0.5em 0;
+  display: inline-block;
+  background: $colorButton;
+
+  border-radius: 0.5em;
+  color: white;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: darken( $colorButton, 10% );
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+.btnDanger {
+  background: $colorDanger;
+  color: white;
+  &:hover {
+    background: darken( $colorDanger, 10% );
+  }
+}
+
+.btnInactive {
+  background: $colorBtnInactive;
+  color: white;
+  &:hover {
+    cursor: default;
+    background: $colorBtnInactive;
+  }
+}
+
+.propsrow {
+  border-bottom: 1px solid $colorPrimaryTrial;
+    div {
+      display: inline-block;
+      padding: 0.5em 1em;
+      color: $colorPrimaryTrial;
+
+      &:nth-last-child(1) {
+        float: right;
+        color: white;
+      }
+    }
+
+}
+
+.modalDialog {
+  color: $colorPrimaryTrial;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  grid-template-columns: auto 100px 100px;
+  grid-template-rows: 80px auto 80px;
+  grid-column-gap: 1em;
+  grid-row-gap: 0;
+  grid-template-areas: "title title title"
+  "content content content"
+  "button1 button2 button3"
+  ;
+  .title {
+    padding: 0 1em;
+    grid-area: title;
+    align-self: center;
+  }
+  .content {
+    padding: 0 1em;
+    grid-area: content;
+  }
+  .button1 {
+    padding: 0 1em;
+    grid-area: button1;
+    justify-self: start;
+    display: inline-block;
+    align-self: center;
+  }
+  .button2 {
+    padding: 0 1em;
+    grid-area: button2;
+    justify-self: end;
+    display: inline-block;
+    align-self: center;
+  }
+  .button3 {
+    padding: 0 1em;
+    grid-area: button3;
+    justify-self: end;
+    display: inline-block;
+    align-self: center;
+  }
+}
+
+
+.modalDialogAlert {
+  color: $colorPrimaryTrial;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 80px auto 80px;
+  grid-column-gap: 1em;
+  grid-row-gap: 0;
+  grid-template-areas: "title"
+  "content"
+  "button"
+;
+  .title {
+    padding: 0 1em;
+    grid-area: title;
+    align-self: center;
+  }
+  .content {
+    padding: 0 1em;
+    grid-area: content;
+  }
+  .button1 {
+    padding: 0 1em;
+    grid-area: button;
+    justify-self: center;
+    display: inline-block;
+    align-self: center;
+  }
+}
+
+
+.scannedSerials {
+  padding: 0.25em 0;
+  text-align: left;
+
+  & > div {
+    display: block;
+    position: relative;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid gray;
+
+      span {
+        display: inline-block;
+      }
+      span:nth-child(1) {
+        color: $bg_dark_blue;
+        font-weight: bold;
+      }
+
+      span:nth-child(2) {
+        float: right;
+        color: black;
+        font-weight: normal;
+    }
+  }
+}
+.scannedSerials3 {
+  padding: 0.25em 0;
+  text-align: left;
+
+  & > div {
+    display: block;
+    position: relative;
+    padding: 0.5em 0;
+    border-bottom: 1px solid gray;
+    overflow: auto;
+
+    span {
+      display: inline-block;
+      font-size: 1em;
+      padding-right: 0.5em;
+    }
+
+    span:nth-child(1) {
+      color: $bg_dark_blue;
+      font-weight: normal;
+      width: 4.2em;
+    }
+
+    span:nth-child(2) {
+      color: black;
+      font-weight: normal;
+      width: 4.3em;
+    }
+
+    span:nth-last-child(1) {
+      float: right;
+      color: black;
+      font-weight: normal;
+      padding-right: 0;
+    }
+
+    &.header span {
+      color: black;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0.5em;
+  left: 0;
+  right: 0;
+  color: $bg_dark_blue;
+  text-align: center;
+}
+
+.logoapp {
+  text-align: center;
+  padding: 2em 0 0;
+  img {
+    width: 240px;
+    height: auto;
+  }
+}
+
+
+.layoutImg {
+  position: relative;
+
+  img.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+  }
+  img.fg {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+  }
+}
+
+.layoutObject {
+  position: relative;
+
+  object svg {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.containerCodeInfo {
+  border: 1px solid $bg_dark_blue;
+  padding: 1em;
+
+  position: relative;
+  text-align: center;
+  font-size: 1.25em;
+
+  span {
+    display: inline-block;
+  }
+  span:nth-child(1) {
+    float: left;
+
+    .containerColor {
+      width: 1em;
+      height: 1em;
+      display: block;
+      border-radius: 100%;
+    }
+  }
+  span:nth-child(2) {
+    text-align: center;
+  }
+  span:nth-child(3) {
+    float: right;
+  }
+}
+
+.centered {
+  margin: 0 auto;
+  text-align: center;
+}
+.maxWidthDialog {
+  max-width: 500px;
+  padding-left:1em;
+  padding-right:1em;
+}
+@media only screen and (max-width: 360px) {
+  .maxWidthDialog {
+    max-width: 350px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .maxWidthDialog {
+    max-width: 310px;
+  }
+}
+
+.containerInput {
+  font-size: 1.25em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.errMessage {
+  color: red;
+  padding: 1em;
+  display: block;
+}
+
+
+.spaced, form {
+  & > div {
+    margin: 0.5em 0;
+  }
+}
+
+
+.bottomFix {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $colorButton;
+  & > div {
+    padding: 0em 0.05em;
+    clear: both;
+
+    span {
+      width: 50%;
+      padding: 0.5em 0.05em;
+      text-align: center;
+      display: inline-block;
+      color: $colorButtonLight;
+    }
+    span:nth-child(1) {
+      width: 65%;
+    }
+    span:nth-child(2) {
+      width: 35%;
+    }
+    span:nth-child(1) {
+      border-right: 1px solid $colorButtonLight;
+    }
+    span.text {
+      color: white;
+    }
+  }
+}
+
+
+.size2x {
+  font-size: 2em;
+}
+.size0x25 {
+  font-size: 1.25em;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+
+.page {
+  height: calc(100vh - 6em);
+  padding-bottom: 60px;
+}
+.scanShowPage {
+  height: 100%;
+  position: relative;
+  .barScanOnBottom {
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    right: 1em;
+  }
+}
+
+
+
+.block_page {
+  display: block;
+
+  padding-left: 25%;
+  position: relative;
+  margin: 1em 1em 0 1em;
+
+  span {
+    position: absolute;
+    left: 0em;
+    top: 0em;
+    width: 28%;
+
+    div {
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
+    }
+    padding: 0.25em;
+
+      span {
+        left: 0;
+        top: 0;
+        border-radius: 100%;
+        background-color: $colorCircle;
+        color: $colorCircle;
+        width: 100%;
+        height: 100%;
+        max-width: 7em;
+        max-height: 7em;
+
+        &:hover {
+          background: darken( $colorCircle, 10% );
+        }
+      }
+      span.inactive {
+        background-color: lightgray;
+        color: lightgray;;
+      }
+  }
+
+}
+
+.block_elem {
+  padding-left: 2em;
+  div {
+    display: block;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    margin: 0.35em 0 0.35em 0;
+  }
+  div.number {
+    font-size: 2.6em;
+    text-transform: none;
+    margin: 0;
+  }
+  div.number2 {
+    font-size: 1.6em;
+  }
+  div.inactive {
+    color: lightgray;;
+  }
+}
+
+.block_elem_page {
+  margin-bottom: 2em;
+}
+
+.block_page_material .block_elem {
+  border-bottom: 1px solid lightgray;
+}
+
+.buttons_bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  .btn {
+    width: 40%;
+    margin: 1em 0.5em;
+    font-size: 1.25em;
+    border-radius: 3px;
+  }
+}
+
+
+.block_elem_defective {
+  max-height: 16em;
+  overflow: hidden;
+}
+
+.loader_off {
+  display: none;
+}
+.loader_on {
+
+  div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: black;
+    opacity: 0.25;
+  }
+
+  p {
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    color: white;
+  }
+}
+
+
+.current_page {
+  background-color: rgba(255, 0,0, 0.05);
+
+  .nofocus {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 3em;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+
+  }
+  &:focus {
+    background-color: transparent;
+    outline: none;
+
+    .nofocus {
+      display: none;
+    }
+  }
+}
